@@ -1,8 +1,8 @@
 import random
+
 def main():
     # create a game instance
     game = Director()
-
     # create a card
     card = Card()
 
@@ -63,8 +63,8 @@ class Director:
 class Card:
 
     def __init__(self):
-        self.current_card = random.randint(1, 14)
-        self.next_card = random.randint(1, 14)
+        self.current_card = random.randint(1, 13)
+        self.next_card = random.randint(1, 13)
 
     def display_card(self):
         print(f'The card is: {self.current_card}')
@@ -72,11 +72,8 @@ class Card:
     def display_next_card(self):
         print(f'Next card is: {self.next_card}')
 
-
     def update_card(self):
         self.current_card = self.next_card
-        self.next_card = random.randint(1, 14)
-
-
+        self.next_card = random.randint(1, 13)
 
 main()
